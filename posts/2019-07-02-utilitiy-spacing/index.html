@@ -1,0 +1,297 @@
+
+<!doctype html>
+<html lang="EN">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Responsive utility CSS spacing</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="theme-color" content="#f4eeec">
+        
+        <style>
+            
+        </style>
+        <link rel="stylesheet" href="/css/main.css" type="text/css"/>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen|Radley" type="text/css"/>
+    </head>
+
+    <body>
+
+        
+        <nav class="wrap">
+            <ul>
+                    <li>
+                        <a href="/" >Home</a>
+                    </li>
+                    <li>
+                        <a href="/pages/about/" >About</a>
+                    </li>
+                    <li>
+                        <a href="/pages/blog-index/" >Blog index</a>
+                    </li>
+                    <li>
+                        <a href="/pages/writing-practice/" >Writing practice</a>
+                    </li>
+            </ul>
+        </nav>
+
+        <div class="wrap"><h1>Responsive utility CSS spacing</h1>
+<h2>The problem</h2>
+<p>When a designer is working on a UI in something like Sketch they will get the spacing to look how they want, normally based on a pre-defined spacing scale.</p>
+<div class="side-scroller">
+<div class="side-scroller-child whitespace-nowrap">
+<div class="spacer spacer--small" style="height: 16px; width: 16px;">
+  <span>16</span>
+</div>
+<div class="spacer spacer--small" style="height: 20px; width: 20px;">
+  <span>20</span>
+</div>
+<div class="spacer" style="height: 24px; width: 24px;">
+  <span>24</span>
+</div>
+<div class="spacer" style="height: 32px; width: 32px;">
+  <span>32</span>
+</div>
+<div class="spacer" style="height: 40px; width: 40px;">
+  <span>40</span>
+</div>
+<div class="spacer" style="height: 48px; width: 48px;">
+  <span>48</span>
+</div>
+<div class="spacer" style="height: 56px; width: 56px;">
+  <span>56</span>
+</div>
+<div class="spacer" style="height: 64px; width: 64px;">
+  <span>64</span>
+</div>
+<div class="spacer" style="height: 72px; width: 72px;">
+  <span>72</span>
+</div>
+<div class="spacer" style="height: 80px; width: 80px;">
+  <span>80</span>
+</div>
+<div class="spacer" style="height: 96px; width: 96px;">
+  <span>96</span>
+</div>
+<div class="spacer" style="height: 128px; width: 128px;">
+  <span>128</span>
+</div>
+</div>
+</div>
+<h2>Fist solution - Spacing SASS variables and a class for each</h2>
+<pre><code class="language-SCSS">$space-1: 8px;
+$space-2: 16px;
+$space-3: 20px;
+$space-4: 24px;
+$space-5: 32px;
+$space-6: 40px;
+$space-7: 48px;
+$space-8: 56px;
+$space-9: 64px;
+$space-10: 72px;
+</code></pre>
+<p>These are useful for making sure no <a href="https://css-tricks.com/magic-numbers-in-css/">magic-numbers</a> are used and also for stepping up or down the scale to give more or less space in an intuitive way.</p>
+<p>There are a few problems with doing with variables alone:</p>
+<ol>
+<li>You will write a specific class for  every use, even if al you are doing is adding a little margin.</li>
+<li>The specific class will need to be set at breakpoints</li>
+<li>The spacing is the most likely thing to change when a designer is reviewing a UI. Not because its wrong but because of the differences of rendering in design software with sometimes placeholder content and a browser with real content.</li>
+</ol>
+<h2>Second solution - Responsive classes</h2>
+<p>You could make a set of responsive utilities, but unfortunately the spacing on mobile can't just be scaled up in a programmatic way to produce a desktop layout. There is as much art as science to the whitespace and you may even use a completely different layout a larger sizes anyway.</p>
+<pre><code class="language-SCSS">$space-5: 32px;
+$space-shrink-factor-sm: 0.8;
+
+
+.margin-b-5 {
+    
+    margin-bottom: $space-5 * $space-shrink-factor-small;
+    
+    @media screen and ( min-width: 640px) {
+        margin-bottom: $space-5;
+    }
+
+}
+
+</code></pre>
+<h2>Third solution - Fully responsive set of utilities</h2>
+<p>After reading the <a href="https://2019.stateofcss.com/">State of CSS 2019</a> I saw that <a href="https://tailwindcss.com/">Tailwindcss</a> had a very high satisfaction rating. There is an ongoing debate on weather CSS utilities are a good thing or not, but my view is that in some cases they are too useful to ignore. I really loved the syntax of the Tailwind so I made a set of utilities that followed the same [breakpoint]:[utility] format in <a href="https://codepen.io/jqim/pen/ydLpVB">Codepen</a>.</p>
+<p>I wanted to make another version with Webpack as a learning exercise.</p>
+<p>Here is how it works ...</p>
+<h3>A sass map of your breakpoints</h3>
+<p>These could be be hooked into an existing set of breakpoints in your frontend code.</p>
+<pre><code class="language-SCSS">$breakpoints:(
+  md: 640px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1440px
+);
+</code></pre>
+<h3>A sass map of your spacing values</h3>
+<p>I find these are best to be hard-coded as variables as the almost never change once set by a designer. Also sometimes a designer will throw logic to the wind and break the mathematical pattern at certain points because sometimes logic doesn't look visually pleasing.</p>
+<pre><code class="language-SCSS">/* The variables can be used in component .classes */
+$space-1: 8px;
+$space-2: 16px;
+$space-3: 20px;
+...
+
+/* The map is for looping over */
+$space: (
+    1: $space-1,
+    2: $space-2,
+    3: $space-3,
+    ...
+);
+</code></pre>
+<h3>A breakpoint mixin to use in the loop</h3>
+<p>You will need a way to programmatically wrap classes in a breakpoint.</p>
+<pre><code class="language-SCSS">@mixin breakpointWrap($screenSize) {
+  
+  @media screen and ( min-width: map-get($breakpoints, $screenSize) ) {
+    @content;
+  }
+  
+};
+</code></pre>
+<h3>A loop function to build all the utilities</h3>
+<p>Then a nested for loop of the breakpoints -&gt; spacing values -&gt; .classes</p>
+<pre><code class="language-SCSS">@each $bpKey, $bgVal in $breakpoints {
+
+  @include breakpointWrap($bpKey){
+
+    @each $sKey, $sVal in $space {
+      .#{$bpKey}--m-#{$sKey}{
+        margin: $sVal;
+      }
+        .#{$bpKey}--m-b-#{$sKey}{
+          margin-bottom: $sVal;
+        }
+        ...
+        /* + top, left and right */
+      
+      .#{$bpKey}--p-#{$sKey} {
+        padding: $sVal;
+      }
+        .#{$bpKey}--p-b-#{$sKey} {
+        padding-bottom: $sVal;
+        }
+        ...  
+        /* + top, left and right */
+    };
+    
+  };
+
+};
+</code></pre>
+<p>I opted to leave the base 'small' size out of the loops so didn't have to include any conditions.</p>
+<h3>File size worries</h3>
+<p>This can produce a surprizing amount of CSS even when you are sure you only included the useful stuff.</p>
+<div class="calculator p-2 md--p-4">
+    <ol>
+        <li>
+            <label for="breakpoints">Breakpoints:</label>
+            <input
+                name="breakpoints"
+                type="number"
+                min="1"
+                max="10"
+                id="js-breakpoints-input"
+            />
+        </li>
+        <li>
+            <label for="values">Values:</label>
+            <input
+                name="values"
+                type="number"
+                min="1"
+                max="20"
+                id="js-values-input"
+            />
+        </li>
+            <li>
+            <label for="classes">Classes:</label>
+            <input
+                name="classes"
+                type="number"
+                min="1"
+                max="20"
+                id="js-classes-input"
+            />
+        </li>
+    </ol>
+    <h4 class="m-t-2 md--m-t-4 m-b-2 md--m-b-4">
+        Total CSS classes:
+        <strong id="js-total-output"></strong>
+    </h4>
+    <button class="m-b-0" id="js-reset-button">
+        Reset
+    </button>
+</div>
+<script>
+
+(function(){
+    const breakpoints = document.getElementById('js-breakpoints-input');
+    const values = document.getElementById('js-values-input');
+    const classes = document.getElementById('js-classes-input');
+    const total = document.getElementById('js-total-output');
+    const reset = document.getElementById('js-reset-button');
+
+    const inputs = [breakpoints, values, classes];
+
+    const calculator = {
+        INITIAL_VALUES: {
+            breakpoints: 3,
+            values: 20,
+            classes: 12,
+        },
+        inputValues: {},
+
+        getTotal: function(){
+            return this.inputValues.breakpoints * this.inputValues.values * this.inputValues.classes
+        },
+        reset: function() {
+            this.inputValues = {...this.INITIAL_VALUES}
+        }
+    }
+
+    const render = () => {
+        inputs.forEach(input => {
+            input.value = calculator.inputValues[input.name];
+        })
+        total.innerHTML = calculator.getTotal();
+    }
+    
+    calculator.reset();
+    render();
+
+    inputs.forEach(input => {
+        input.addEventListener('change', e => {
+            calculator.inputValues[event.target.name] = event.target.value
+            render();
+        })
+    })
+    reset.addEventListener('click', e => {
+        calculator.reset();
+        render();
+    })
+
+})()
+
+</script>
+<p>500 css classes and weighted in at about 24kb, which seems like a lot for something so simple.</p>
+<h3>Purge css</h3>
+<p>But you can use <a href="https://github.com/FullHuman/purgecss-webpack-plugin">purgecss-webpack-plugin</a> to removed unused classes from your source files. I found it takes a few seconds for webpack to do this, so it's probably best left to a production build only. Or this might be better as a NPM script.</p>
+<p>Have a look at the working example on <a href="https://github.com/jimmaclean/utility-spacing">GitHub</a></p>
+</div>
+
+    </body>
+
+</html>
