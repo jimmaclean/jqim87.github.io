@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>About me</title>
+        <title>Fund name generator</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -29,7 +29,7 @@
         <nav class="wrap">
             <ul>
                     <li>
-                        <a href="/about/"  class="active">About</a>
+                        <a href="/about/" >About</a>
                     </li>
                     <li>
                         <a href="/blog-index/" >Blog index</a>
@@ -38,7 +38,7 @@
                         <a href="/writing-practice/" >Writing practice</a>
                     </li>
                     <li>
-                        <a href="/fund-name-generator/" >Fund name</a>
+                        <a href="/fund-name-generator/"  class="active">Fund name</a>
                     </li>
                     <li>
                         <a href="/" >Home</a>
@@ -46,21 +46,36 @@
             </ul>
         </nav>
 
-        <div class="wrap">    
+        <div class="wrap">
+<h1 class="m-b-6">Fund name generator</h1>
+<button id="js-generate-button">Generate</button>
+<p id="js-generate-output"></p>
 
-<h1>About me</h1>    
-<p>
-    I am a user focused frontend developer (2yrs) and UI/UX designer(9yrs).
-</p>
-<p>
-    Because of my broad skillset, I can infer the details of a design from
-    high level visuals and continue the design process into the code.
-</p>
-<p>
-    I get excited about accessible HTML, flexible CSS and performant vanilla
-    JavaScript. Smooth rendering and great looking layouts at all sizes are my
-    baseline of quality.
-</p></div>
+<script>
+
+    (function () {
+        const output = document.getElementById('js-generate-output');
+        const button = document.getElementById('js-generate-button');
+
+        function render(message) {
+            output.innerHTML = message;
+        };
+
+        function handelClick() {
+            fetch('https://ppdeta9gib.execute-api.us-east-1.amazonaws.com/fund')
+                .then(response => response.json())
+                .then(data => {
+                    render(data.message);
+                })
+        };
+
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            handelClick();
+        });
+
+    })()
+</script></div>
 
     </body>
 
