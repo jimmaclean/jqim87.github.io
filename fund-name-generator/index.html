@@ -38,10 +38,10 @@
                         <a href="/writing-practice/" >Writing practice</a>
                     </li>
                     <li>
-                        <a href="/fund-name-generator/"  class="active">Fund name</a>
+                        <a href="/" >Home</a>
                     </li>
                     <li>
-                        <a href="/" >Home</a>
+                        <a href="/fund-name-generator/"  class="active">Fund name</a>
                     </li>
             </ul>
         </nav>
@@ -52,20 +52,31 @@
 <p id="js-generate-output"></p>
 
 <script>
+    const apiBaseUrl = 'https://fyhinbvm47.execute-api.us-east-1.amazonaws.com';
 
     (function () {
         const output = document.getElementById('js-generate-output');
         const button = document.getElementById('js-generate-button');
+        const onLoadHash = window.location.hash.substr(1);
 
-        function render(message) {
+        if(onLoadHash !== "") {
+            fetch(`${apiBaseUrl}/fund/${onLoadHash}`)
+                .then(response => response.json())
+                .then(data => {
+                    render(data);
+                })
+        }
+
+        function render({message, seed}) {
+            window.location.hash = seed;
             output.innerHTML = message;
         };
 
         function handelClick() {
-            fetch('https://ppdeta9gib.execute-api.us-east-1.amazonaws.com/fund')
+            fetch(`${apiBaseUrl}/fund`)
                 .then(response => response.json())
                 .then(data => {
-                    render(data.message);
+                    render(data);
                 })
         };
 
