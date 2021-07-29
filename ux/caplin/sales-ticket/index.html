@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html lang="EN">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Sales ticket</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="theme-color" content="#f4eeec">
+        
+        <style>
+            
+        </style>
+        <link rel="stylesheet" href="/css/main.css" type="text/css"/>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen|Radley" type="text/css"/>
+    </head>
+
+    <body>
+
+        
+        <nav class="wrap">
+            <ul>
+                    <li>
+                        <a href="/" >Home</a>
+                    </li>
+                    <li>
+                        <a href="/ux/" >UX portfolio</a>
+                    </li>
+                    <li>
+                        <a href="/about/" >About</a>
+                    </li>
+                    <li>
+                        <a href="/fund-name-generator/" >Fund name</a>
+                    </li>
+            </ul>
+        </nav>
+
+        <div class="wrap">
+
+<h1>Sales ticket</h1>
+<h3>Considerations for the users</h3>
+<p>The basic workflow for quoting simple trade has three main parts; entering the trade details, applying the margin and locking a price. The trader can then execute the trade if the client accepts the quote.</p>
+
+<img src="/assets/01-03-01-spot-trade-workflow.png" alt="">
+
+<p>Some clients are more price sensitive than others and it is down the individual skill of the trader to know when to push and when to let go. Quoting a price to a client is done quickly over the phone but all clients know they will be adding a sales margin. For the more price sensitive clients they may call multiple times to different banks or the same bank but different traders or even try slightly different requests to try and understand what the margin is.</p>
+<p>For a simple trade there is only two places the margin can be, on the sell side of the trade or the buy side. Currency trades area always a buy and a sell at the same time. But for the more complex trades that are a collection of trades that happen at different times with a total price agreed today, there can be as many as 3 places the margin can be added for one quote. Not all, but some traders want the freedom to place the margin at a granular level to price up different legs of a trade.</p>
+<p>This is why the beginning of the ticket design was at the most complex type of trade available in the product, a 'forward-forward swap'.</p>
+<p>When working in this space it is not enough to produce a UI design with placeholder numbers. (e.g. 88.88888) You can't test a traders understanding of a design if the numbers are wrong. The first thing I did was work closely with an expert to understand the numbers that go into this transaction. I then kept it in excel to produce the wireframes.</p>
+
+<img src="/assets/01-03-02-excel.png" alt="">
+
+<p>Once the wireframe was able to communicate the scenario properly I moved on to UI design.</p>
+
+<img src="/assets/01-03-03-ticket-fwfw.png" alt="">
+
+<p>Doing the most complex trade first meant the more simple trades and their acompanying summaries were easier to complete.</p>
+
+<img src="/assets/01-03-04-summary.png" alt="">
+
+<img src="/assets/01-03-05-ticket-spot.png" alt="">
+
+<p>Because my UI matched up with a fully functional excel model the development team were able understand the functionality faster without lengthy explanations from a BA or the subject matter expert.</p>
+
+<img src="/assets/01-03-06-margin-control.png" alt="">
+
+<p>One of the hardest parts of the sales ticket to get right was the margin indicator.</p>
+<a href="/ux/caplin/margin-indicator">Read more -></a>
+<div class="back-link">
+    <p><a href="./"><- Go back to the overview of this project</a></p>
+</div>
+</div>
+
+    </body>
+
+</html>

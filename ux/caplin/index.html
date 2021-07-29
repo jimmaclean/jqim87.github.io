@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html lang="EN">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Caplin FX Sales Trader</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="theme-color" content="#f4eeec">
+        
+        <style>
+            
+        </style>
+        <link rel="stylesheet" href="/css/main.css" type="text/css"/>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen|Radley" type="text/css"/>
+    </head>
+
+    <body>
+
+        
+        <nav class="wrap">
+            <ul>
+                    <li>
+                        <a href="/" >Home</a>
+                    </li>
+                    <li>
+                        <a href="/ux/" >UX portfolio</a>
+                    </li>
+                    <li>
+                        <a href="/about/" >About</a>
+                    </li>
+                    <li>
+                        <a href="/fund-name-generator/" >Fund name</a>
+                    </li>
+            </ul>
+        </nav>
+
+        <div class="wrap">
+
+<h1>Caplin FX Sales Trader</h1>
+<p>I worked on the sales trader product for a year and a half as part of a remote scrum team.</p>
+
+<img src="/assets/01-01-fxsales.png" alt="">
+
+<h2>The users</h2>
+<p>The users of this app are people who sit on the trading floor at banks who sell foreign exchange to the banks clients. They are people who work intently for most the day, monitoring the market, writing reports, communicating with colleagues on the floor through chat, emails and the phone. It's a fast paced environment where mistakes are costly and time consuming to fix.</p>
+
+<h3>Core workflow of a FX sales trade</h3>
+<ol>
+    <li>A client calls their the bank and is put through to their Relationship manager/Sales trader.</li>
+    <li>The trader will take down the details of their clients required trade.</li>
+    <li>The trader gets a price from another desk on the floor for that currency pair and amount.</li>
+    <li>The trade will mentally add a margin to the price and give the client a quote.</li>
+    <li>The client will either accept the quote or decline and either call another bank or call back later.</li>
+    <li>If the client accepts, the trader will make a note of the quoted price and hang up.</li>
+</ol>
+<p>The total call time is less than 2 minutes.</p>
+<ul>
+    <li>The trader will  then (unless another client calls) execute the trade.</li>
+    <li>Once the trade is in the banks system the trader will have to find it. Then use the price actually executed and their quoted price to calculate their margin (and hope it is still positive).</li>
+</ul>
+
+<h3>How the Sales Trader product changes the workflow</h3>
+<ol>
+    <li>A client calls their the bank and is put through to their Relationship manager/Sales trader.</li>
+    <li>The trader will enter the details of the trade into the Sales Trader UI and click a button to get a real time streaming price.</li>
+    <li>The trader can adjust the margin or use the default margin for that clients pricing tier.</li>
+    <li>The trader clicks a button to take the market price, add the margin and then lock the price against the movements of the market.</li>
+    <li>The trader quotes the locked price to the client.</li>
+    <li>If the client accepts the trade can be executed with all the details of the quoted price, market price and the margin.</li>
+</ol>
+
+<h2>Explore three key areas of the product I worked on:</h2>
+<div class="flex-container">
+    <div class="read-more-box">
+        <h4>Client Search</h4>
+        <p>A client has just called for a price, how can the trader bring up the client's profile as quickly as possible?</p>
+        <a href="client-search">Read more -></a>
+    </div>
+
+    <div class="read-more-box">
+        <h4>Sales ticket</h4>
+        <p>Other traders are more concerned with just the market price. Sales traders need the market price, the margin, and a quotable price of a currency pair. How do you show everything without overwhelming the trader?</p>
+        <a href="sales-ticket">Read more -></a>
+    </div>
+
+    <div class="read-more-box">
+        <h4>Margin indicator</h4>
+        <p>The market is always moving, the price the trader quotes to the client has to stand still. How can the trader know if the trade will still make money from moment to moment?</p>
+        <a href="margin-indicator">Read more -></a>
+    </div>
+</div>
+
+<h2>A new concept</h2>
+<p>After a year and a half of working on the product I took a critical view of what I had done and went back to basics with a discovery phase before the next iteration of the design.</p>
+<a href="new-layout">Read more -></a>
+</div>
+
+    </body>
+
+</html>
