@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="EN">
 
@@ -16,93 +15,233 @@
         <link rel="manifest" href="/site.webmanifest">
         <meta name="theme-color" content="#f4eeec">
         
-        <style>
-            
-        </style>
+        
         <link rel="stylesheet" href="/css/main.css" type="text/css"/>
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen|Radley" type="text/css"/>
+        <script src="/js/accessability-controls.js"></script>
     </head>
 
     <body>
-
         
-        <nav class="wrap">
-            <ul>
-                    <li>
-                        <a href="/"  class="active">Home</a>
+        <nav class="navigation layout-wrap">
+            <ul class="navigation__list">
+
+                    
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                    
+                        
+                    
+
+                    <li class="navigation__item">
+                        <a href="/" class="navigation__link navigation__link--active">Work</a>
                     </li>
-                    <li>
-                        <a href="/ux/" >UX portfolio</a>
+
+                    
+                    
+                    
+
+                    <li class="navigation__item">
+                        <a href="/about/" class="navigation__link ">About</a>
                     </li>
-                    <li>
-                        <a href="/about/" >About</a>
-                    </li>
-                    <li>
-                        <a href="/fund-name-generator/" >Fund name</a>
+
+                    
+                    
+                    
+
+                    <li class="navigation__item">
+                        <a href="/contact/" class="navigation__link ">Contact</a>
                     </li>
             </ul>
+            <div class="navigation__right">
+                <div class="accessibility-control">
+  <button class="accessibility-control__button" type="button" data-overlay-button="text">
+    <span class="accessibility-control__button-icon accessibility-control__button-icon--text">Aa</span>
+    <span class="accessibility-control__button-label">Change text size</span>
+  </button>
+  <div class="accessibility-control__panel" aria-hidden="true" data-overlay-panel="text">
+    <button type="button" data-overlay-close-button="text">Close</button>
+    <fieldset>
+      <legend>Text size</legend>
+      <div>
+        <input type="radio" id="font-size-smaller" name="font-size" value="smaller">
+        <label for="font-size-smaller">Smaller</label>
+      </div>
+      <div>
+        <input type="radio" id="font-size-auto" name="font-size" value="auto" checked>
+        <label for="font-size-auto">Auto</label>
+      </div>
+      <div>
+        <input type="radio" id="font-size-larger" name="font-size" value="larger">
+        <label for="font-size-larger">Larger</label>
+      </div>
+    </fieldset>
+    <p tabindex=0 class="visible-tab-only">end of dialouge</p>
+  </div>
+  <div aria-hidden="true" class="overlay-screen" data-overlay-dimmer="text"></div>
+</div>
+
+<div class="accessibility-control">
+  <button class="accessibility-control__button" type="button" data-overlay-button="color">
+    <span class="accessibility-control__button-icon accessibility-control__button-icon--color">
+      <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Change colour scheme</title>
+    <g id="Group-10" transform="translate(0.163124, 0.741537)">
+        <path d="M5.33687582,17 C8.28435094,17 10.6737516,14.6105993 10.6737516,11.6631242 C10.6737516,9.69814077 8.89479303,5.81043271 5.33687582,2.27373675e-13 C1.77895861,5.81043271 0,9.69814077 0,11.6631242 C0,14.6105993 2.38940069,17 5.33687582,17 Z" id="Oval" fill="#21003C"></path>
+        <path d="M12.1741149,1.22115145 C15.3715392,6.51369034 17.0106274,10.0772486 17.0106274,11.9215873 C17.0106274,13.2572537 16.4692417,14.4664726 15.5939393,15.341775 C14.718637,16.2170774 13.509418,16.7584631 12.1737516,16.7584631 C10.8380853,16.7584631 9.6288663,16.2170774 8.75356394,15.341775 C7.87826158,14.4664726 7.33687582,13.2572537 7.33687582,11.9215873 C7.33687582,10.0771311 8.97617284,6.51323638 12.1741149,1.22115145 Z" id="Oval" stroke="#21003C" fill="#FFFFFF"></path>
+    </g>
+</svg>
+    </span>
+    <span class="accessibility-control__button-label">Change colour scheme</span>
+  </button>
+  <div class="accessibility-control__panel" aria-hidden="true" data-overlay-panel="color">
+    <button type="button" data-overlay-close-button="color">Close</button>
+    <fieldset>
+      <legend>Color scheme</legend>
+      <div>
+        <input type="radio" id="color-scheme-light" name="color-scheme" value="light">
+        <label for="color-scheme-light">Light</label>
+      </div>
+      <div>
+        <input type="radio" id="color-scheme-auto" name="color-scheme" value="auto" checked>
+        <label for="color-scheme-auto">Auto</label>
+      </div>
+      <div>
+        <input type="radio" id="color-scheme-dark" name="color-scheme" value="dark">
+        <label for="color-scheme-dark">Dark</label>
+      </div>
+    </fieldset>
+    <p tabindex=0 class="visible-tab-only">end of dialouge</p>
+  </div>
+  <div aria-hidden="true" class="overlay-screen" data-overlay-dimmer="color"></div>
+</div>
+
+<script>
+
+
+</script>
+            </div>
         </nav>
 
-        <div class="wrap">
-<h1 class="m-b-0">James Maclean</h1>
+        
+    <div class="layout-wrap"><div class="homepage--hero">
+    <h1 class="m-t-0 m-b-1">James Maclean</h1>
+    <p class="large m-b-0">Frontend Developer, UX/UI</p>
+</div>
 
-<h4 class="subtitle">BA Graphic Design, MA User Experience Design</h4>
-<p>Frontend developer with UI/UX experience.</p>
-<ul>
-<li>
-    <a
-    href="https://www.linkedin.com/in/jamesmacleanjqim"
-    target="_blank"
-    rel="noopener noreferrer"
-    >
-        LinkedIn
-    </a>
-</li>
-<li>
-    <a
-    href="https://codepen.io/jqim"
-    target="_blank"
-    rel="noopener noreferrer"
-    >
-    Codepen
-    </a>
-</li>
-<li>
-    <a
-    href="https://github.com/jimmaclean"
-    target="_blank"
-    rel="noopener noreferrer"
-    >
-    GitHub
-    </a>
-</li>
-<li>
-    <a
-    href="ux"
-    target="_blank"
-    rel="noopener noreferrer"
-    >
-    UX portfolio
-    </a>
-</li>
-</ul>
-
-<h3>Latest blog posts</h3>
-
+<div class="homepage--row">
+    <div class="homepage--col1">
+        <h3>Development</h3>
+        <p class="large m-b-5">
+            I approach coding work with consideration and care for my colleagues. 
+            I believe the best code can be worked on by some one else at a moments notice.
+        </p>
+    </div>
 
     
-
-    
-
-    
-        <ul>
+    <div class="homepage--col2">
+        <h5 class="m-b-1">Code</h5>
+        <ul class="m-b-5">
             <li>
-                <a href="/posts/2019-07-02-utilitiy-spacing/">Responsive utility CSS spacing</a>
-                <span>02/07/2019</span>
+                <a href="https://github.com/jimmaclean/redux-dogs">Redux dogs</a>
+            </li>
+            <li>
+                <a href="https://codepen.io/jqim">Codepen</a>
+            </li>
+            <li>
+                <a href="https://mybuilder.com">MyBuilder.com</a>
+            </li>
+            <li>
+                <a href="https://bitbucket.org/jqim87/pebbles/src/master/">Pebbles design system for Rock Insurance</a>
             </li>
         </ul>
-    
+        <h5 class="m-b-1">Speaking</h5>
+        <ul class="m-b-5">
+            <li>
+                <a href="https://www.youtube.com/watch?v=uaa6xLWYfjc&t=1170s">Tailwind and Symfony</a>
+            </li>
+        </ul>
+    </div>
 </div>
+
+<div class="homepage--row">
+    <div class="homepage--col1">
+        <h3>Design</h3>
+        <p class="large m-b-7 md--m-b-9">
+            I employ a pragmatic combination of design, technical and product mangement skills
+            to produce effective interface designs.
+        </p>
+    </div>
+
+    
+    <div class="homepage--col2">
+        <div class="layout-flex-row flex-between flex-baseline m-b-2 md--m-b-3">
+            
+    <svg class="logo-fidelity" alt="Fidelity International" xmlns="http://www.w3.org/2000/svg" width="143.24" height="45" viewBox="0 0 143.24 45" style="fill: currentColor;"><path d="M86.14,30.3v2H90V10.2H86v9.71h-.06a5.2,5.2,0,0,0-4.56-2.35c-4.13,0-6.65,3.55-6.65,7.55s2.71,7.59,6.71,7.59a5.37,5.37,0,0,0,4.67-2.4Zm-3.6-.84c-2.38,0-3.64-2-3.64-4.24S80.11,21,82.43,21c2.51,0,3.68,2,3.68,4.18C86.11,27.57,84.83,29.46,82.54,29.46Z"/><path d="M82.63,41.5a1.57,1.57,0,0,0-.55-1.28,2.34,2.34,0,0,0-1.48-.38H79v5h1.22v-2l1.11,2h1.47L81.65,43A1.5,1.5,0,0,0,82.63,41.5Zm-2,.75h-.4v-1.4h.47a.67.67,0,0,1,.73.7C81.39,42,81.09,42.25,80.59,42.25Z"/><polygon points="73 44.89 75.89 44.89 75.89 43.9 74.22 43.9 74.22 42.85 75.89 42.85 75.89 41.86 74.22 41.86 74.22 40.83 75.89 40.83 75.89 39.84 73 39.84 73 44.89"/><polygon points="66.8 40.83 67.97 40.83 67.97 44.89 69.19 44.89 69.19 40.83 70.35 40.83 70.35 39.84 66.8 39.84 66.8 40.83"/><path d="M71,14.38A2.42,2.42,0,0,0,73.29,12,2.39,2.39,0,0,0,71,9.69a2.42,2.42,0,0,0-2.35,2.37h0A2.41,2.41,0,0,0,71,14.38Z"/><polygon points="111.57 10.2 107.54 10.2 107.54 10.57 107.54 32.31 111.57 32.31 111.57 10.2"/><rect x="68.73" y="18.06" width="4.44" height="14.28"/><polygon points="65.69 20.6 66.81 18.1 59.73 18.1 59.73 13.9 66.81 13.9 66.81 10.25 55.29 10.25 55.29 18.1 53.18 18.1 53.18 20.6 55.29 20.6 55.29 22.06 53.18 22.06 53.18 24.56 55.29 24.56 55.29 32.39 59.73 32.39 59.73 24.56 63.93 24.56 65.04 22.06 59.73 22.06 59.73 20.6 65.69 20.6"/><polygon points="62.81 42.68 60.97 39.84 59.75 39.84 59.75 44.89 60.98 44.89 60.97 42.02 62.81 44.89 64.04 44.89 64.04 39.84 62.81 39.84 62.81 42.68"/><rect x="55.29" y="39.84" width="1.23" height="5.05"/><polygon points="134.52 39.84 133.29 39.84 133.29 44.89 136.16 44.89 136.16 43.9 134.52 43.9 134.52 39.84"/><polygon points="121.68 42.68 119.84 39.84 118.61 39.84 118.61 44.89 119.84 44.89 119.84 42.02 121.68 44.89 122.91 44.89 122.91 39.84 121.68 39.84 121.68 42.68"/><rect x="113.53" y="17.95" width="4.03" height="14.36"/><path d="M115.54,9.69a2.42,2.42,0,0,0-2.35,2.37,2.35,2.35,0,1,0,2.35-2.37Z"/><path d="M127.1,29.15a3.18,3.18,0,0,1-.81.09c-1,0-1.31-.31-1.31-.95V21h2.12V18H125V13.46h-4V18h-1.84V21H121v7.72c0,3.09,1.59,3.74,4.22,3.74a15.55,15.55,0,0,0,1.93-.17Z"/><polygon points="138.82 17.95 135.78 27.45 135.72 27.45 132.68 17.95 128.26 17.95 133.66 32.31 132.09 36.39 136.29 36.39 143.24 17.95 138.82 17.95"/><path d="M127.33,39.84l-1.66,5H127l.21-.73H129l.22.73h1.35l-1.66-5Zm.17,3.33.59-1.88h0l.59,1.88Z"/><path d="M94.45,39.84l-1.66,5H94.1l.22-.73H96.1l.22.73h1.35l-1.66-5Zm.17,3.33.59-1.88h0l.59,1.88Z"/><path d="M98.73,17.56c-4.33,0-7.35,3-7.35,7.6s3,7.54,7.35,7.54c3.38,0,6-1.53,7-4.47l-3.91-.3a3.12,3.12,0,0,1-2.88,1.7,3.38,3.38,0,0,1-3.36-3.35h10.51V25.16C106.08,20.53,103.07,17.56,98.73,17.56Zm-3.16,6.15a3.25,3.25,0,0,1,6.49,0H95.57Z"/><polygon points="99.72 40.83 100.89 40.83 100.89 44.89 102.11 44.89 102.11 40.83 103.27 40.83 103.27 39.84 99.72 39.84 99.72 40.83"/><rect x="106.52" y="39.84" width="1.23" height="5.05"/><path d="M113.32,39.74a2.72,2.72,0,0,0-1.89.71,2.65,2.65,0,1,0,4.5,1.93A2.56,2.56,0,0,0,113.32,39.74Zm-.06,4.11a1.44,1.44,0,0,1-1.43-1.48h0a1.43,1.43,0,1,1,2.86,0A1.44,1.44,0,0,1,113.26,43.85Z"/><polygon points="115.93 42.38 115.93 42.38 115.93 42.38 115.93 42.38"/><polygon points="88.86 42.68 87.02 39.84 85.79 39.84 85.79 44.89 87.02 44.89 87.02 42.02 88.86 44.89 90.08 44.89 90.08 39.84 88.86 39.84 88.86 42.68"/><path d="M0,45H45V0H0ZM14.54,24.63h2.89v-2.3H14.54V19.42h2.89V10.26H30.86v4.27H22.61v4.89h8.25l-1.3,2.91H22.61v2.3h5.9l-1.3,2.92h-4.6v9H17.43v-9H14.54Z"/></svg>
+
+            <p class="m-b-0">2015 - 2019</p>
+        </div>
+        <p class="m-b-1">I was instrumental in the re-design of the FundsNetwork advisory investment platform which has gone on to win industry awards based on features and functionality available to financial advisors.</p>
+        <a href="ux/fidelity" class="m-b-7 md--m-b-9 block">View work <svg id="arrow" class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 11">
+    <g style="fill: none;stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: inherit;">
+        <polyline points="24.5 1 29 5.5 24.5 10" />
+        <line x1="28.5" y1="5.5" x2="1" y2="5.5" />
+    </g>
+</svg></a>
+
+        <div class="layout-flex-row flex-between flex-baseline m-b-2 md--m-b-3">
+            
+    <svg class="logo-citi" alt="Citibank logo" xmlns="http://www.w3.org/2000/svg" width="77.54" height="50" viewBox="0 0 77.54 50" style="fill: currentColor;"><path d="M16,24.05a10.51,10.51,0,0,1,7.5,3.5l.14.13,3.59-4.33-.1-.12A13.68,13.68,0,0,0,16.18,18,16.6,16.6,0,0,0,4.83,22.16,15.51,15.51,0,0,0,0,34,15.52,15.52,0,0,0,4.83,45.83,16.51,16.51,0,0,0,16.18,50a13.69,13.69,0,0,0,11-5.24l.1-.11-3.59-4.33-.14.13A10.5,10.5,0,0,1,16,43.94c-5.57,0-9.61-4.18-9.61-9.95S10.43,24.05,16,24.05Z"/><rect x="30.85" y="18.5" width="6.33" height="30.91"/><path d="M57.31,44.24c-2.05,0-3-1.09-3-3.49V24.35h6.46V18.53H54.33V8.91l-6.2,3.32v6.3H42.78v5.82h5.35V41.79c0,4.76,2.82,8,7,8.09a9.85,9.85,0,0,0,5.62-1.42l.06,0,1.53-6-.38.23A9.17,9.17,0,0,1,57.31,44.24Z"/><rect x="67.22" y="18.5" width="6.34" height="30.91"/><path d="M34,13.41a24.82,24.82,0,0,1,36.17,0l.08.09h7.28l-.29-.42a30.73,30.73,0,0,0-50.31,0l-.3.42h7.29Z"/></svg>
+
+            <p class="m-b-0">2014 - 2015</p>
+        </div>
+        <p class="m-b-1">I conducted user research on the trading floor at CitiBank and designed features in collaboration with members of the trading floor to manage the risk of changing a UI responsible for moving billions of dollars per day.</p>
+        <a href="ux/citi" class="m-b-7 md--m-b-9 block">View work <svg id="arrow" class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 11">
+    <g style="fill: none;stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: inherit;">
+        <polyline points="24.5 1 29 5.5 24.5 10" />
+        <line x1="28.5" y1="5.5" x2="1" y2="5.5" />
+    </g>
+</svg></a>
+
+        <div class="layout-flex-row flex-between flex-baseline m-b-2 md--m-b-3">
+            
+    <svg class="logo-caplin" alt="Caplin systems logo" xmlns="http://www.w3.org/2000/svg" width="138.86" height="21" viewBox="0 0 138.86 21" style="fill: currentColor;"><path d="M102.22,21h1c3.32,0,3.32-2.65,3.32-2.65V0h-4.3ZM81.84,21H94.17a3.45,3.45,0,0,0,3.33-2.65H86.2V0H81.84ZM61.93,10.91V2.65h3.7c3.38,0,7.68.78,7.68,4.09,0,3.08-3.57,4.17-6.11,4.17h-.45a3.58,3.58,0,0,0-3.39,2.65H66.2c5.5,0,11.26-1.69,11.26-6.79S71.79,0,65.55,0h-8V21h1c3.41,0,3.34-2.63,3.34-2.63V10.91ZM38.48,4,43,11.87H38.22a3.83,3.83,0,0,0-3.88,2.65H44.42L48.32,21h4.76L40.21,0H37.05c-2.52,4.12-13,21-13,21h4.58l3.79-6.48,1.5-2.65ZM22.93,0H16.1C6.81,0,0,3.94,0,10.41,0,17.09,6.29,21,16.85,21h.88c2.94,0,3.77-3.13,3.77-3.13s-.68.48-5.4.48c-6.33,0-11.48-2.91-11.48-7.85,0-4.73,4.67-7.85,11.7-7.85,2.22,0,2.53,0,3.32,0C22.26,2.74,22.93,0,22.93,0ZM115,0h4c1.49,1.57,15.35,15.71,15.35,15.71h.09V0h4.36V21h-4.15c-2.32-2.33-15.22-16.08-15.22-16.08h-.09V18.35S119.47,21,116,21h-1Z"/></svg>
+
+            <p class="m-b-0">2011 - 2014</p>
+        </div>
+        <p class="m-b-1">Whilst at Caplin I designed key product features for the ‘Sales Trader’ product that are still part of the key offering nearly 10 years later. I liaised with client representatives from DBS bank, Santander and Deutsche Bank to develop foreign exchange trading interfaces used to move millions of dollars per day. I also wrote production CSS to aid development teams.</p>
+        <a href="ux/caplin" class="m-b-7 md--m-b-9 block">View work <svg id="arrow" class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 11">
+    <g style="fill: none;stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: inherit;">
+        <polyline points="24.5 1 29 5.5 24.5 10" />
+        <line x1="28.5" y1="5.5" x2="1" y2="5.5" />
+    </g>
+</svg></a>
+    </div>
+</div>
+
+<h3>Want to talk?</h3>
+<a class="m-b-10 block" href="contact">Contact me</a></div>
+
 
     </body>
 

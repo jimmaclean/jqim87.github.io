@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="EN">
 
@@ -16,59 +15,164 @@
         <link rel="manifest" href="/site.webmanifest">
         <meta name="theme-color" content="#f4eeec">
         
-        <style>
-            
-        </style>
+        
         <link rel="stylesheet" href="/css/main.css" type="text/css"/>
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen|Radley" type="text/css"/>
+        <script src="/js/accessability-controls.js"></script>
     </head>
 
     <body>
-
         
-        <nav class="wrap">
-            <ul>
-                    <li>
-                        <a href="/" >Home</a>
+        <nav class="navigation layout-wrap">
+            <ul class="navigation__list">
+
+                    
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            
+                        
+                    
+                        
+                    
+                    
+
+                    <li class="navigation__item">
+                        <a href="/" class="navigation__link navigation__link--active">Work</a>
                     </li>
-                    <li>
-                        <a href="/ux/" >UX portfolio</a>
+
+                    
+                    
+                    
+
+                    <li class="navigation__item">
+                        <a href="/about/" class="navigation__link ">About</a>
                     </li>
-                    <li>
-                        <a href="/about/" >About</a>
-                    </li>
-                    <li>
-                        <a href="/fund-name-generator/" >Fund name</a>
+
+                    
+                    
+                    
+
+                    <li class="navigation__item">
+                        <a href="/contact/" class="navigation__link ">Contact</a>
                     </li>
             </ul>
+            <div class="navigation__right">
+                <div class="accessibility-control">
+  <button class="accessibility-control__button" type="button" data-overlay-button="text">
+    <span class="accessibility-control__button-icon accessibility-control__button-icon--text">Aa</span>
+    <span class="accessibility-control__button-label">Change text size</span>
+  </button>
+  <div class="accessibility-control__panel" aria-hidden="true" data-overlay-panel="text">
+    <button type="button" data-overlay-close-button="text">Close</button>
+    <fieldset>
+      <legend>Text size</legend>
+      <div>
+        <input type="radio" id="font-size-smaller" name="font-size" value="smaller">
+        <label for="font-size-smaller">Smaller</label>
+      </div>
+      <div>
+        <input type="radio" id="font-size-auto" name="font-size" value="auto" checked>
+        <label for="font-size-auto">Auto</label>
+      </div>
+      <div>
+        <input type="radio" id="font-size-larger" name="font-size" value="larger">
+        <label for="font-size-larger">Larger</label>
+      </div>
+    </fieldset>
+    <p tabindex=0 class="visible-tab-only">end of dialouge</p>
+  </div>
+  <div aria-hidden="true" class="overlay-screen" data-overlay-dimmer="text"></div>
+</div>
+
+<div class="accessibility-control">
+  <button class="accessibility-control__button" type="button" data-overlay-button="color">
+    <span class="accessibility-control__button-icon accessibility-control__button-icon--color">
+      <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Change colour scheme</title>
+    <g id="Group-10" transform="translate(0.163124, 0.741537)">
+        <path d="M5.33687582,17 C8.28435094,17 10.6737516,14.6105993 10.6737516,11.6631242 C10.6737516,9.69814077 8.89479303,5.81043271 5.33687582,2.27373675e-13 C1.77895861,5.81043271 0,9.69814077 0,11.6631242 C0,14.6105993 2.38940069,17 5.33687582,17 Z" id="Oval" fill="#21003C"></path>
+        <path d="M12.1741149,1.22115145 C15.3715392,6.51369034 17.0106274,10.0772486 17.0106274,11.9215873 C17.0106274,13.2572537 16.4692417,14.4664726 15.5939393,15.341775 C14.718637,16.2170774 13.509418,16.7584631 12.1737516,16.7584631 C10.8380853,16.7584631 9.6288663,16.2170774 8.75356394,15.341775 C7.87826158,14.4664726 7.33687582,13.2572537 7.33687582,11.9215873 C7.33687582,10.0771311 8.97617284,6.51323638 12.1741149,1.22115145 Z" id="Oval" stroke="#21003C" fill="#FFFFFF"></path>
+    </g>
+</svg>
+    </span>
+    <span class="accessibility-control__button-label">Change colour scheme</span>
+  </button>
+  <div class="accessibility-control__panel" aria-hidden="true" data-overlay-panel="color">
+    <button type="button" data-overlay-close-button="color">Close</button>
+    <fieldset>
+      <legend>Color scheme</legend>
+      <div>
+        <input type="radio" id="color-scheme-light" name="color-scheme" value="light">
+        <label for="color-scheme-light">Light</label>
+      </div>
+      <div>
+        <input type="radio" id="color-scheme-auto" name="color-scheme" value="auto" checked>
+        <label for="color-scheme-auto">Auto</label>
+      </div>
+      <div>
+        <input type="radio" id="color-scheme-dark" name="color-scheme" value="dark">
+        <label for="color-scheme-dark">Dark</label>
+      </div>
+    </fieldset>
+    <p tabindex=0 class="visible-tab-only">end of dialouge</p>
+  </div>
+  <div aria-hidden="true" class="overlay-screen" data-overlay-dimmer="color"></div>
+</div>
+
+<script>
+
+
+</script>
+            </div>
         </nav>
 
-        <div class="wrap">
+        
+    
+<div class="layout-wrap stack-1">
+    <h1>Fidelity International</h1>
 
-<h1>Fidelity International</h1>
-<p>I currently work at Fidelity and the projects I'm working on are still being built so I can only give an overview here.</p>
+    <h3>Animation styleguide</h3>
+    <p>I have created a set of guidelines for all digital design and development to follow across all areas of the business globally.</p>
 
-<h3>Animation styleguide</h3>
-<p>I have created a set of guidelines for all digital design and development to follow across all areas of the business globally.</p>
+    <h2>FundsNetwork</h3>
 
-<h2>FundsNetwork</h3>
+    <p>FundsNetwork is administration software for financial advisory firms to manage their clients investment.</p>
+    <ul>
+        <li>I delivered key features under tight deadlines and technical constraints as part of the ongoing mantanence of the product.</li>
+        <li>I worked on a reporting feature which conveys complex financial reporting in a clear way that the end clients can understand easily.</li>
+        <li>I worked on a strategic re-design of some key areas of the product which has required me to undertake a thorough understanding of the entire financial advice process.</li>
+    </ul>
 
-<p>FundsNetwork is administration software for financial advisory firms to manage their clients investment.</p>
-<ul>
-    <li>I delivered key features under tight deadlines and technical constraints as part of the ongoing mantanence of the product.</li>
-    <li>I worked on a reporting feature which conveys complex financial reporting in a clear way that the end clients can understand easily.</li>
-    <li>I worked on a strategic re-design of some key areas of the product which has required me to undertake a thorough understanding of the entire financial advice process.</li>
-</ul>
+    <h3>Client reporting</h3>
+    <p>Reporting to clients is a fundamental part of an advisory business. They are often generated manually to varying degrees of quality. This document is the result of several rounds of user testing to measure the comprehension of the financial scenario it reports on.</p>
+    <a href="/assets/report.pdf">Annual investment report a4 for print</a>
+    <p>Responsive web version specs</p>
+</div>
 
-<h3>Client reporting</h3>
-<p>Reporting to clients is a fundamental part of an advisory business. They are often generated manually to varying degrees of quality. This document is the result of several rounds of user testing to measure the comprehension of the financial scenario it reports on.</p>
-<a href="/assets/report.pdf">Annual investment report a4 for print</a>
-<p>Responsive web version specs</p>
 <div style="height: 60vh; overflow: hidden;">
     <img src="/assets/report-specs.png" alt="">
 </div>
 
-<h3>Strategic redesign</h3>
+<div class="layout-wrap">
+    <h3>Strategic redesign</h3>
+</div>
 
 <img src="/assets/03-01-01-postits.jpg" alt="">
 <img src="/assets/03-01-02-architecture.jpg" alt="">
@@ -78,17 +182,20 @@
 <img src="/assets/03-01-06-clients.jpg" alt="">
 <img src="/assets/03-01-07-firm.jpg" alt="">
 
-<h3>Desktop InVision prototypes</h3>
-<H4>Visual design for the initial concept was done by <a href="https://www.linkedin.com/in/joe-wyndham-43b48245/">Joe Wyndham</a></H4>
-<a href="../invision/concept-00/index.html">Initial concept</a>
-<hr>
-<p>We used the concept as a base design to continue itterating through user testing.</p>
-<ol>
-    <li><a href="../invision/concept-01/index.html">User Testing version A</a></li>
-    <li><a href="../invision/concept-02/index.html">User Testing version B</a></li>
-    <li><a href="../invision/concept-03/index.html">Combined version based on user testing</a></li>
-</ol>
+<div class="layout-wrap stack-1">
+    <h3>Desktop InVision prototypes</h3>
+    <H4>Visual design for the initial concept was done by <a href="https://www.linkedin.com/in/joe-wyndham-43b48245/">Joe Wyndham</a></H4>
+    <a href="../invision/concept-00/index.html">Initial concept</a>
+    <hr>
+    <p>We used the concept as a base design to continue itterating through user testing.</p>
+    <ol>
+        <li><a href="../invision/concept-01/index.html">User Testing version A</a></li>
+        <li><a href="../invision/concept-02/index.html">User Testing version B</a></li>
+        <li><a href="../invision/concept-03/index.html">Combined version based on user testing</a></li>
+    </ol>
 </div>
+
+
 
     </body>
 

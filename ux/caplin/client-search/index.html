@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="EN">
 
@@ -16,34 +15,136 @@
         <link rel="manifest" href="/site.webmanifest">
         <meta name="theme-color" content="#f4eeec">
         
-        <style>
-            
-        </style>
+        
         <link rel="stylesheet" href="/css/main.css" type="text/css"/>
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen|Radley" type="text/css"/>
+        <script src="/js/accessability-controls.js"></script>
     </head>
 
     <body>
-
         
-        <nav class="wrap">
-            <ul>
-                    <li>
-                        <a href="/" >Home</a>
+        <nav class="navigation layout-wrap">
+            <ul class="navigation__list">
+
+                    
+                    
+                        
+                            
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                    
+
+                    <li class="navigation__item">
+                        <a href="/" class="navigation__link navigation__link--active">Work</a>
                     </li>
-                    <li>
-                        <a href="/ux/" >UX portfolio</a>
+
+                    
+                    
+                    
+
+                    <li class="navigation__item">
+                        <a href="/about/" class="navigation__link ">About</a>
                     </li>
-                    <li>
-                        <a href="/about/" >About</a>
-                    </li>
-                    <li>
-                        <a href="/fund-name-generator/" >Fund name</a>
+
+                    
+                    
+                    
+
+                    <li class="navigation__item">
+                        <a href="/contact/" class="navigation__link ">Contact</a>
                     </li>
             </ul>
+            <div class="navigation__right">
+                <div class="accessibility-control">
+  <button class="accessibility-control__button" type="button" data-overlay-button="text">
+    <span class="accessibility-control__button-icon accessibility-control__button-icon--text">Aa</span>
+    <span class="accessibility-control__button-label">Change text size</span>
+  </button>
+  <div class="accessibility-control__panel" aria-hidden="true" data-overlay-panel="text">
+    <button type="button" data-overlay-close-button="text">Close</button>
+    <fieldset>
+      <legend>Text size</legend>
+      <div>
+        <input type="radio" id="font-size-smaller" name="font-size" value="smaller">
+        <label for="font-size-smaller">Smaller</label>
+      </div>
+      <div>
+        <input type="radio" id="font-size-auto" name="font-size" value="auto" checked>
+        <label for="font-size-auto">Auto</label>
+      </div>
+      <div>
+        <input type="radio" id="font-size-larger" name="font-size" value="larger">
+        <label for="font-size-larger">Larger</label>
+      </div>
+    </fieldset>
+    <p tabindex=0 class="visible-tab-only">end of dialouge</p>
+  </div>
+  <div aria-hidden="true" class="overlay-screen" data-overlay-dimmer="text"></div>
+</div>
+
+<div class="accessibility-control">
+  <button class="accessibility-control__button" type="button" data-overlay-button="color">
+    <span class="accessibility-control__button-icon accessibility-control__button-icon--color">
+      <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Change colour scheme</title>
+    <g id="Group-10" transform="translate(0.163124, 0.741537)">
+        <path d="M5.33687582,17 C8.28435094,17 10.6737516,14.6105993 10.6737516,11.6631242 C10.6737516,9.69814077 8.89479303,5.81043271 5.33687582,2.27373675e-13 C1.77895861,5.81043271 0,9.69814077 0,11.6631242 C0,14.6105993 2.38940069,17 5.33687582,17 Z" id="Oval" fill="#21003C"></path>
+        <path d="M12.1741149,1.22115145 C15.3715392,6.51369034 17.0106274,10.0772486 17.0106274,11.9215873 C17.0106274,13.2572537 16.4692417,14.4664726 15.5939393,15.341775 C14.718637,16.2170774 13.509418,16.7584631 12.1737516,16.7584631 C10.8380853,16.7584631 9.6288663,16.2170774 8.75356394,15.341775 C7.87826158,14.4664726 7.33687582,13.2572537 7.33687582,11.9215873 C7.33687582,10.0771311 8.97617284,6.51323638 12.1741149,1.22115145 Z" id="Oval" stroke="#21003C" fill="#FFFFFF"></path>
+    </g>
+</svg>
+    </span>
+    <span class="accessibility-control__button-label">Change colour scheme</span>
+  </button>
+  <div class="accessibility-control__panel" aria-hidden="true" data-overlay-panel="color">
+    <button type="button" data-overlay-close-button="color">Close</button>
+    <fieldset>
+      <legend>Color scheme</legend>
+      <div>
+        <input type="radio" id="color-scheme-light" name="color-scheme" value="light">
+        <label for="color-scheme-light">Light</label>
+      </div>
+      <div>
+        <input type="radio" id="color-scheme-auto" name="color-scheme" value="auto" checked>
+        <label for="color-scheme-auto">Auto</label>
+      </div>
+      <div>
+        <input type="radio" id="color-scheme-dark" name="color-scheme" value="dark">
+        <label for="color-scheme-dark">Dark</label>
+      </div>
+    </fieldset>
+    <p tabindex=0 class="visible-tab-only">end of dialouge</p>
+  </div>
+  <div aria-hidden="true" class="overlay-screen" data-overlay-dimmer="color"></div>
+</div>
+
+<script>
+
+
+</script>
+            </div>
         </nav>
 
-        <div class="wrap">
+        
+    <div class="layout-wrap">
 
 <h1>Client search</h1>
 <h3>User Needs</h3>
@@ -65,10 +166,11 @@ If not then they can add more characters or focus a Firm (tier 1) and press 'Tab
 
 <p>After the trader has the client the are looking for they use the sales ticket to enter the trade details.</p>
 <a href="/ux/caplin/sales-ticket">Read more -></a>
-<div class="back-link">
+<div>
     <p><a href="./"><- Go back to the overview of this project</a></p>
 </div>
 </div>
+
 
     </body>
 
