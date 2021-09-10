@@ -497,10 +497,11 @@ li > a {
     background-color: var(--bg-color);
     position: absolute;
     right: 0;
+    will-change: opacity, transform;
     opacity: 1;
     transform: translateX(0%);
     transition: opacity 300ms, transform 400ms;
-    animation-direction: reverse; }
+    animation-direction: both; }
     .accessibility-control__panel[aria-hidden="true"] {
       transform: translateX(100%);
       opacity: 0;
