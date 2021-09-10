@@ -3,13 +3,15 @@
   font-family: 'barlow';
   src: url("/fonts/barlow-medium.woff2") format("woff2"), url("/fonts/barlow-medium.woff") format("woff");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 @font-face {
   font-family: 'barlow';
   src: url("/fonts/barlow-extrabold.woff2") format("woff2"), url("/fonts/barlow-extrabold.woff") format("woff");
   font-weight: bold;
-  font-style: normal; }
+  font-style: normal;
+  font-display: swap; }
 
 /* prettier-ignore */
 html {
@@ -91,7 +93,8 @@ body {
   font-size: 1.4rem; }
 
 body {
-  font-family: 'barlow', sans-serif; }
+  font-family: 'barlow', sans-serif;
+  -webkit-font-smoothing: antialiased; }
 
 ol,
 ul {
@@ -500,8 +503,7 @@ li > a {
     will-change: opacity, transform;
     opacity: 1;
     transform: translateX(0%);
-    transition: opacity 300ms, transform 400ms;
-    animation-direction: both; }
+    transition: opacity 300ms, transform 400ms; }
     .accessibility-control__panel[aria-hidden="true"] {
       transform: translateX(100%);
       opacity: 0;
