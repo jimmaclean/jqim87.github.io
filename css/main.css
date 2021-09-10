@@ -383,6 +383,7 @@ h6, .h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-flow: row wrap;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-right: 0.5rem; }
@@ -402,11 +403,12 @@ h6, .h6 {
     align-items: center; }
   .navigation__right {
     flex: 0 1 auto;
-    margin-left: 2.5rem; }
+    padding-left: 1.25rem;
+    margin-left: auto; }
   .navigation__item {
     margin-bottom: 0; }
     .navigation__item + .navigation__item {
-      margin-left: 0.5rem; }
+      margin-left: 1rem; }
   .navigation__link {
     padding: 1rem 0;
     position: relative;
