@@ -74,72 +74,116 @@
                     </li>
             </ul>
             <div class="navigation__right">
-                <div class="accessibility-control">
-  <button class="accessibility-control__button" type="button" data-overlay-button="text">
-    <span class="accessibility-control__button-icon accessibility-control__button-icon--text">Aa</span>
-    <span class="accessibility-control__button-label">Change text size</span>
-  </button>
-  <div class="accessibility-control__panel" aria-hidden="true" data-overlay-panel="text">
-    <button type="button" data-overlay-close-button="text">Close</button>
-    <fieldset>
-      <legend>Text size</legend>
-      <div>
-        <input type="radio" id="font-size-smaller" name="font-size" value="smaller">
-        <label for="font-size-smaller">Smaller</label>
-      </div>
-      <div>
-        <input type="radio" id="font-size-auto" name="font-size" value="auto" checked>
-        <label for="font-size-auto">Auto</label>
-      </div>
-      <div>
-        <input type="radio" id="font-size-larger" name="font-size" value="larger">
-        <label for="font-size-larger">Larger</label>
-      </div>
-    </fieldset>
-    <p tabindex=0 class="visible-tab-only">end of dialouge</p>
-  </div>
-  <div aria-hidden="true" class="overlay-screen" data-overlay-dimmer="text"></div>
-</div>
+                
+<div class="accessibility-control-group">
+  <div class="accessibility-control">
+    <button class="accessibility-control__button" type="button" data-overlay-button="text">
+      <span class="accessibility-control__button-icon accessibility-control__button-icon--text">Aa</span>
+      <span class="accessibility-control__button-label">Change text size</span>
+    </button>
+    <div class="accessibility-control__panel invert-focus" aria-hidden="true" data-overlay-panel="text">
+      <div class="accessibility-control__modal">
+        <button type="button" class="accessibility-control__close-button" data-overlay-close-button="text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="cross-icon">
+    <g style="fill: none;stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: inherit;">
+        <line x1="1" y1="1" x2="15" y2="15"/>
+        <line x1="1" y1="15" x2="15" y2="1"/>
+    </g>
+</svg>
+          <span class="sr-only">Close</span>
+        </button>
+        <fieldset class="accessibility-control__fieldset">
+          <legend class="accessibility-control__legend">Text size</legend>
+          <div class="accessibility-control__input-row">
+            <div class="accessibility-control__input-wrap">
+              <input class="accessibility-control__input" type="radio" id="font-size-smaller" name="font-size" value="smaller">
+              <label class="accessibility-control__label" for="font-size-smaller">
+                <div class="accessibility-control__fake-input">
+                  <span class="accessibility-control__preview-text accessibility-control__preview-text--smaller">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut id cupiditate perspiciatis veritatis magnam, atque ipsam! Saepe ducimus quasi vitae maiores beatae praesentium ullam culpa labore, enim libero eos sed!</span>
+                  <span class="accessibility-control__selected-icon"><svg id="arrow" class="tick-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 10"><defs><style>.cls-1{fill:none;stroke:#7200ca;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs>
+    <polyline style="fill: none;stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: inherit;" class="cls-1" points="1 5 4 9 10 1"/>
+</svg></span>
+                </div>
+                <span class="accessibility-control__fake-label">Smaller</span>
+              </label>
+            </div>
+            <div class="accessibility-control__input-wrap">
+              <input class="accessibility-control__input" type="radio" id="font-size-auto" name="font-size" value="auto" checked>
+              <label class="accessibility-control__label" for="font-size-auto">
+                <div class="accessibility-control__fake-input">
+                  <span class="accessibility-control__preview-text accessibility-control__preview-text--auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut id cupiditate perspiciatis veritatis magnam, atque ipsam! Saepe ducimus quasi vitae maiores beatae praesentium ullam culpa labore, enim libero eos sed!</span>
+                  <span class="accessibility-control__selected-icon"><svg id="arrow" class="tick-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 10"><defs><style>.cls-1{fill:none;stroke:#7200ca;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs>
+    <polyline style="fill: none;stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: inherit;" class="cls-1" points="1 5 4 9 10 1"/>
+</svg></span>
+                </div>
+                <span class="accessibility-control__fake-label">Auto</span>
+              </label>
+            </div>
+            <div class="accessibility-control__input-wrap">
+              <input class="accessibility-control__input" type="radio" id="font-size-larger" name="font-size" value="larger">
+              <label class="accessibility-control__label" for="font-size-larger">
+                <div class="accessibility-control__fake-input">
+                  <span class="accessibility-control__preview-text accessibility-control__preview-text--larger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut id cupiditate perspiciatis veritatis magnam, atque ipsam! Saepe ducimus quasi vitae maiores beatae praesentium ullam culpa labore, enim libero eos sed!</span>
+                  <span class="accessibility-control__selected-icon"><svg id="arrow" class="tick-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 10"><defs><style>.cls-1{fill:none;stroke:#7200ca;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs>
+    <polyline style="fill: none;stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: inherit;" class="cls-1" points="1 5 4 9 10 1"/>
+</svg></span>
+                </div>
+                <span class="accessibility-control__fake-label">Larger</span>
+              </label>
+            </div>
+          </div>
 
-<div class="accessibility-control">
-  <button class="accessibility-control__button" type="button" data-overlay-button="color">
-    <span class="accessibility-control__button-icon accessibility-control__button-icon--color">
-      <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        </fieldset>
+        <p tabindex=0 class="visible-tab-only">end of dialogue</p>
+      </div>
+    </div>
+    <div aria-hidden="true" class="overlay-screen" data-overlay-dimmer="text"></div>
+  </div>
+
+  <div class="accessibility-control">
+    <button class="accessibility-control__button" type="button" data-overlay-button="color">
+      <span class="accessibility-control__button-icon accessibility-control__button-icon--color">
+        <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Change colour scheme</title>
     <g id="Group-10" transform="translate(0.163124, 0.741537)">
         <path d="M5.33687582,17 C8.28435094,17 10.6737516,14.6105993 10.6737516,11.6631242 C10.6737516,9.69814077 8.89479303,5.81043271 5.33687582,2.27373675e-13 C1.77895861,5.81043271 0,9.69814077 0,11.6631242 C0,14.6105993 2.38940069,17 5.33687582,17 Z" id="Oval" fill="#21003C"></path>
         <path d="M12.1741149,1.22115145 C15.3715392,6.51369034 17.0106274,10.0772486 17.0106274,11.9215873 C17.0106274,13.2572537 16.4692417,14.4664726 15.5939393,15.341775 C14.718637,16.2170774 13.509418,16.7584631 12.1737516,16.7584631 C10.8380853,16.7584631 9.6288663,16.2170774 8.75356394,15.341775 C7.87826158,14.4664726 7.33687582,13.2572537 7.33687582,11.9215873 C7.33687582,10.0771311 8.97617284,6.51323638 12.1741149,1.22115145 Z" id="Oval" stroke="#21003C" fill="#FFFFFF"></path>
     </g>
 </svg>
-    </span>
-    <span class="accessibility-control__button-label">Change colour scheme</span>
-  </button>
-  <div class="accessibility-control__panel" aria-hidden="true" data-overlay-panel="color">
-    <button type="button" data-overlay-close-button="color">Close</button>
-    <fieldset>
-      <legend>Color scheme</legend>
-      <div>
-        <input type="radio" id="color-scheme-light" name="color-scheme" value="light">
-        <label for="color-scheme-light">Light</label>
-      </div>
-      <div>
-        <input type="radio" id="color-scheme-auto" name="color-scheme" value="auto" checked>
-        <label for="color-scheme-auto">Auto</label>
-      </div>
-      <div>
-        <input type="radio" id="color-scheme-dark" name="color-scheme" value="dark">
-        <label for="color-scheme-dark">Dark</label>
-      </div>
-    </fieldset>
-    <p tabindex=0 class="visible-tab-only">end of dialouge</p>
+      </span>
+      <span class="accessibility-control__button-label">Change colour scheme</span>
+    </button>
+    <div class="accessibility-control__panel invert-focus" aria-hidden="true" data-overlay-panel="color">
+      <button type="button" class="accessibility-control__close-button" data-overlay-close-button="color" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" class="cross-icon">
+    <g style="fill: none;stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: inherit;">
+        <line x1="1" y1="1" x2="15" y2="15"/>
+        <line x1="1" y1="15" x2="15" y2="1"/>
+    </g>
+</svg>
+        <span class="sr-only">Close</span>
+      </button>
+      <fieldset>
+        <legend>Color scheme</legend>
+        <div>
+          <input type="radio" id="color-scheme-light" name="color-scheme" value="light">
+          <label for="color-scheme-light">Light</label>
+        </div>
+        <div>
+          <input type="radio" id="color-scheme-auto" name="color-scheme" value="auto" checked>
+          <label for="color-scheme-auto">Auto</label>
+        </div>
+        <div>
+          <input type="radio" id="color-scheme-dark" name="color-scheme" value="dark">
+          <label for="color-scheme-dark">Dark</label>
+        </div>
+      </fieldset>
+      <p tabindex=0 class="visible-tab-only">end of dialogue</p>
+    </div>
+    <div aria-hidden="true" class="overlay-screen" data-overlay-dimmer="color"></div>
   </div>
-  <div aria-hidden="true" class="overlay-screen" data-overlay-dimmer="color"></div>
 </div>
 
-<script>
-
-
-</script>
             </div>
         </nav>
 
