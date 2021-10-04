@@ -513,6 +513,11 @@ h6, .h6 {
       .accessibility-control__modal {
         background-color: var(--purple-50);
         box-shadow: none; } }
+    :root[data-color-scheme="light"] .accessibility-control__modal {
+      background-color: var(--text-color); }
+    @media (prefers-color-scheme: light) {
+      .accessibility-control__modal {
+        background-color: var(--text-color); } }
   .accessibility-control__close-button {
     position: absolute;
     top: 0;
