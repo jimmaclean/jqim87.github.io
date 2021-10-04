@@ -506,6 +506,13 @@ h6, .h6 {
     @media screen and (min-width: 640px) {
       .accessibility-control__modal {
         padding: 1.5rem; } }
+    :root[data-color-scheme="light"] .accessibility-control__modal {
+      background-color: var(--text-color);
+      box-shadow: 0 10px 30px -5px var(--purple-900); }
+    @media (prefers-color-scheme: light) {
+      .accessibility-control__modal {
+        background-color: var(--text-color);
+        box-shadow: 0 10px 30px -5px var(--purple-900); } }
     :root[data-color-scheme="dark"] .accessibility-control__modal {
       background-color: var(--purple-50);
       box-shadow: none; }
@@ -513,11 +520,6 @@ h6, .h6 {
       .accessibility-control__modal {
         background-color: var(--purple-50);
         box-shadow: none; } }
-    :root[data-color-scheme="light"] .accessibility-control__modal {
-      background-color: var(--text-color); }
-    @media (prefers-color-scheme: light) {
-      .accessibility-control__modal {
-        background-color: var(--text-color); } }
   .accessibility-control__close-button {
     position: absolute;
     top: 0;
