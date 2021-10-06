@@ -478,17 +478,19 @@ h6, .h6 {
       display: none; }
   .accessibility-control__panel {
     z-index: 2;
-    width: 100vw;
+    width: 100%;
     position: fixed;
     right: 0;
     will-change: opacity, transform;
     opacity: 1;
     transform: translateX(0%);
-    transition: opacity 300ms, transform 400ms; }
+    transition: opacity 300ms, transform 400ms;
+    padding: 1rem; }
     @media screen and (min-width: 640px) {
       .accessibility-control__panel {
         width: unset;
-        position: absolute; } }
+        position: absolute;
+        padding: 1rem 0.5rem; } }
     .accessibility-control__panel[aria-hidden="true"] {
       transform: translateX(100%);
       opacity: 0;
@@ -496,13 +498,14 @@ h6, .h6 {
       .accessibility-control__panel[aria-hidden="true"].invisible {
         visibility: hidden; }
   .accessibility-control__modal {
+    max-width: 480px;
     border-radius: 0.75rem;
     background-color: var(--text-color);
     box-shadow: 0 10px 30px -5px var(--purple-900);
     color: var(--bg-color);
     padding: 1.25rem;
-    position: relative;
-    margin: 1rem; }
+    margin: auto;
+    position: relative; }
     @media screen and (min-width: 640px) {
       .accessibility-control__modal {
         padding: 1.5rem; } }
