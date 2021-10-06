@@ -585,16 +585,18 @@ h6, .h6 {
     background-color: var(--bg-color);
     color: var(--text-color);
     overflow: hidden;
-    padding: 8px;
     border-radius: 8px; }
     @media screen and (min-width: 640px) {
       .accessibility-control__fake-input {
-        padding: 16px;
         height: 96px;
         width: 96px; } }
   .accessibility-control__preview-text {
-    width: 10em;
+    width: 12em;
+    padding: 8px;
     display: block; }
+    @media screen and (min-width: 640px) {
+      .accessibility-control__preview-text {
+        padding: 16px; } }
     .accessibility-control__preview-text--smaller {
       font-size: 1rem;
       line-height: 1.625;
@@ -637,6 +639,51 @@ h6, .h6 {
           letter-spacing: 0;
           font-weight: normal;
           font-size: 28px; } }
+  .accessibility-control__preview-color {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .accessibility-control__preview-color::before, .accessibility-control__preview-color::after {
+      content: '';
+      display: block;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      border: 1px solid; }
+    .accessibility-control__preview-color::after {
+      margin-left: -8px; }
+    .accessibility-control__preview-color--light, .accessibility-control__preview-color__auto {
+      background-color: var(--white);
+      color: var(--white); }
+      .accessibility-control__preview-color--light::before, .accessibility-control__preview-color__auto::before {
+        background-color: var(--purple-900); }
+      .accessibility-control__preview-color--light::after, .accessibility-control__preview-color__auto::after {
+        background-color: var(--purple-500); }
+    @media (prefers-color-scheme: light) {
+      .accessibility-control__preview-color--auto {
+        background-color: var(--white);
+        color: var(--white); }
+        .accessibility-control__preview-color--auto::before {
+          background-color: var(--purple-900); }
+        .accessibility-control__preview-color--auto::after {
+          background-color: var(--purple-500); } }
+    @media (prefers-color-scheme: dark) {
+      .accessibility-control__preview-color--auto {
+        background-color: var(--purple-900);
+        color: var(--purple-900); }
+        .accessibility-control__preview-color--auto::before {
+          background-color: var(--white); }
+        .accessibility-control__preview-color--auto::after {
+          background-color: var(--purple-300); } }
+    .accessibility-control__preview-color--dark {
+      background-color: var(--purple-900);
+      color: var(--purple-900); }
+      .accessibility-control__preview-color--dark::before {
+        background-color: var(--white); }
+      .accessibility-control__preview-color--dark::after {
+        background-color: var(--purple-300); }
   .accessibility-control__selected-icon {
     opacity: 0;
     position: absolute;
