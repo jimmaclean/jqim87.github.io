@@ -231,9 +231,12 @@
 
         
     <div class="layout-wrap">
-<h1 class="m-b-4 md--m-b-8">Contact</h1>
+<h1 class="m-t-8 m-b-8 md--m-t-10 md--m-b-10">Contact</h1>
 <h3>Social links:</h2>
 <ul class="m-b-4 md--m-b-8">
+  <li>
+    <a href="https://github.com/jimmaclean">GitHub</a>
+  </li>
   <li>
     <a href="https://codepen.io/jqim">Codepen</a>
   </li>
@@ -243,17 +246,52 @@
       target="_blank"
       rel="noopener noreferrer"
       >
-          LinkedIn
+        LinkedIn
       </a>
   </li>
 </ul>
 
+<h3>Email address</h3>
+<div class="m-b-4 md--m-b-8">
+    <button class="button" type="button" id="js-hidden-email-button">Show hidden email address</button>
+    <p id="js-hidden-email-target"></p>
+</div>
+
 <h3>TODO:</h3>
 <ol>
   <li>Add CV PDF download</li>
-  <li>Add email address but hide it from bots</li>
   <li>Phone number? no too far</li>
-</ol></div>
+</ol>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const emailTarget = document.getElementById('js-hidden-email-target');
+    const emailButton = document.getElementById('js-hidden-email-button');
+    const emailFragments = [
+      'qim',
+      '@g',
+      'j',
+      '87',
+      '.c',
+      'ai',
+      'l',
+      'om',
+      'm'
+    ];
+    const emailFragmentKey = 203185647;
+
+    emailButton.addEventListener('click', e => {
+      emailTarget.innerText = emailFragmentKey
+        .toString()
+        .split('')
+        .map(f => emailFragments[f])
+        .join('');
+      emailButton
+        .classList
+        .add('d-none');
+    });
+  });
+</script></div>
 
 
     </body>
