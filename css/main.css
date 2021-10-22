@@ -308,10 +308,11 @@ h6, .h6 {
   appearance: none;
   display: inline-block;
   text-align: center;
-  background-color: #7200CA;
-  background: linear-gradient(180deg, rgba(170, 0, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(circle at 110% -100%, #E254FF 0%, #7200CA 80%);
+  background-color: transparent;
   color: #FFFFFF;
+  transition: color 1000ms ease;
   border-radius: 0.1875rem;
+  overflow: hidden;
   min-width: 17.5rem;
   font-size: 1.375rem;
   line-height: 1.18182;
@@ -319,7 +320,29 @@ h6, .h6 {
   font-weight: bold;
   padding: 0.6em 1em;
   margin-bottom: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative;
+  z-index: 1; }
+  .button::before, .button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%; }
+  .button::before {
+    z-index: -2;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(170, 0, 255, 0.3) 0%, rgba(33, 0, 60, 0) 100%), radial-gradient(circle at 110% -100%, #E254FF 0%, #7200CA 80%); }
+  .button::after {
+    z-index: -1;
+    width: 800%;
+    background: linear-gradient(90deg, rgba(226, 84, 255, 0) 12.5%, rgba(246, 204, 255, 0.8) 60%, #e254ff 90%);
+    transition: transform 800ms ease; }
+  .button:hover {
+    color: #21003C; }
+  .button:hover::after {
+    transform: translateX(-87.5%); }
 
 .arrow-icon {
   height: 0.6em;
