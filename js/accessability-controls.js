@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", function(){
     // Handler when the DOM is fully loaded
-
-function getKeyboardFocusableElements(element = document) {
+  
+  // UTILITIES
+  function getKeyboardFocusableElements(element = document) {
     return [
       ...element.querySelectorAll(
         'a, button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])'
       )
     ].filter((el) => !el.hasAttribute("disabled"));
   }
-  
+
   // https://uxdesign.cc/how-to-trap-focus-inside-modal-to-make-it-ada-compliant-6a50f9a70700
   function moveFocusWithin(event, firstElement, lastElement) {
     if (event.shiftKey) {
@@ -29,7 +30,30 @@ function getKeyboardFocusableElements(element = document) {
   function isEscapeEvent(event) {
     return event.key === "Escape" || event.keyCode == 27;
   }
+
+    
+  // KEYBOARD FOCUS MODE
+  document.addEventListener("keydown", (event) => {
+    (isTabEvent(event) || isEscapeEvent(event)) && setKeyboardModeOn();
+  });
+  document.addEventListener(
+    "click",
+    (event) => {
+      event.detail !== 0 && setKeyboardModeOff();
+    },
+    true
+  );
   
+  function setKeyboardModeOn() {
+    document.body.setAttribute("data-keyboard-mode", true);
+  }
+  function setKeyboardModeOff() {
+    document.body.setAttribute("data-keyboard-mode", false);
+  }
+  setKeyboardModeOff();
+  
+
+  // FONT SIZE + COLOR SCHEME
   const htmlElement = document.documentElement;
   const fontSizeRadioInputs = Array.from(
     document.querySelectorAll('[name="font-size"]')
@@ -50,7 +74,7 @@ function getKeyboardFocusableElements(element = document) {
       setFontSizeTo(e.target.value);
     });
   });
-  
+
   colorSchemeRadioInputs.map((input) => {
     if(currentColorScheme && currentColorScheme === input.value) {
       setColorSchemeTo(currentColorScheme);
@@ -71,6 +95,8 @@ function getKeyboardFocusableElements(element = document) {
     window.localStorage.setItem("colorScheme", colorScheme);
   }
   
+  
+  // OVERLAY CONTOLS
   const allOverlays = [];
   class Overlay {
     constructor(id) {
@@ -123,7 +149,7 @@ function getKeyboardFocusableElements(element = document) {
   
     handelClose() {
       this.close();
-      this.elements.button.focus();
+      this.elements.button.focus({ preventScroll: true });
     }
   
     handelOpen() {
@@ -133,7 +159,7 @@ function getKeyboardFocusableElements(element = document) {
     }
   
     trapFocus() {
-      this.elements.firstElement.focus();
+      this.elements.firstElement.focus({ preventScroll: true });
       document.addEventListener("keydown", this.handelKeydown);
     }
   
@@ -175,23 +201,4 @@ function getKeyboardFocusableElements(element = document) {
   overlayButtons.map((button) => {
     new Overlay(button.dataset.overlayButton);
   });
-  
-  document.addEventListener("keydown", (event) => {
-    (isTabEvent(event) || isEscapeEvent(event)) && setKeyboardModeOn();
-  });
-  document.addEventListener(
-    "click",
-    (event) => {
-      event.detail !== 0 && setKeyboardModeOff();
-    },
-    true
-  );
-  
-  function setKeyboardModeOn() {
-    document.body.setAttribute("data-keyboard-mode", true);
-  }
-  function setKeyboardModeOff() {
-    document.body.setAttribute("data-keyboard-mode", false);
-  }
-  setKeyboardModeOff();
 });
