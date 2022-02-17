@@ -4,14 +4,14 @@
   src: url("/fonts/barlow-medium.woff2") format("woff2"), url("/fonts/barlow-medium.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: swap; }
+  font-display: block; }
 
 @font-face {
   font-family: 'barlow';
   src: url("/fonts/barlow-extrabold.woff2") format("woff2"), url("/fonts/barlow-extrabold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
-  font-display: swap; }
+  font-display: block; }
 
 /* prettier-ignore */
 html {
