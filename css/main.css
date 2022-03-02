@@ -153,7 +153,7 @@ td {
 hr {
   border: 0;
   height: 1px;
-  background-color: #333333; }
+  background-color: var(--text-color); }
 
 a {
   font-size: 1rem;
@@ -170,6 +170,8 @@ a {
       line-height: 1.5;
       letter-spacing: 0;
       font-weight: normal; } }
+  a:hover {
+    text-decoration: underline; }
 
 h1,
 .h1 {
@@ -441,7 +443,8 @@ h6, .h6 {
     padding: 1rem 0;
     position: relative;
     color: var(--text-color);
-    text-decoration: none; }
+    text-decoration: none;
+    transition: color 300ms ease; }
     .navigation__link::after {
       content: '';
       display: block;
@@ -455,6 +458,11 @@ h6, .h6 {
       opacity: 0; }
     .navigation__link--active::after {
       opacity: 1; }
+    .navigation__link:hover {
+      color: var(--link-color); }
+      .navigation__link:hover::after {
+        background-color: var(--link-color);
+        opacity: 0.5; }
 
 .spacer {
   background-color: #FABCC7;
@@ -490,6 +498,7 @@ h6, .h6 {
     position: relative;
     background: none;
     appearance: none;
+    cursor: pointer;
     border: 2px solid transparent;
     border-radius: 50%;
     padding: 0;
