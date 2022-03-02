@@ -459,7 +459,8 @@ h6, .h6 {
     .navigation__link--active::after {
       opacity: 1; }
     .navigation__link:hover {
-      color: var(--link-color); }
+      color: var(--link-color);
+      text-decoration: none; }
       .navigation__link:hover::after {
         background-color: var(--link-color);
         opacity: 0.5; }
@@ -580,7 +581,10 @@ h6, .h6 {
     appearance: none;
     border: none;
     background-color: transparent;
-    padding: 1rem; }
+    padding: 1rem;
+    cursor: pointer; }
+    .accessibility-control__close-button:hover {
+      color: var(--link-color); }
   .accessibility-control__fieldset {
     border: none;
     padding: 0;
@@ -630,6 +634,10 @@ h6, .h6 {
   .accessibility-control__label {
     display: block;
     width: 100%; }
+    .accessibility-control__label:hover .accessibility-control__fake-input {
+      border-color: var(--link-color); }
+    .accessibility-control__label:hover .accessibility-control__fake-label {
+      color: var(--link-color); }
   .accessibility-control__fake-input {
     position: relative;
     height: 80px;
@@ -638,7 +646,8 @@ h6, .h6 {
     background-color: var(--bg-color);
     color: var(--text-color);
     overflow: hidden;
-    border-radius: 8px; }
+    border-radius: 8px;
+    cursor: pointer; }
     @media screen and (min-width: 640px) {
       .accessibility-control__fake-input {
         height: 96px;
